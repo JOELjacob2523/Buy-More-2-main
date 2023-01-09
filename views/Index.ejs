@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stocks</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="body">
+  <h1 id="Wlcm">Welcome To Our Stock Market</h1>
+  <h2 id="market-status"></h2>
+  <h3 id="date"></h3>
+  <p id="HD"></p>
+  <p id="One-Minute"></p>
+
+  <div class="center">
+    <button id="ac" onclick="showAddCompanyForm()">Click To Add Company</button>
+    <form name="addCompanyForm" id="addCompanyForm" style="display: none;">
+      <input type="text" id="UC" onchange="upperCase()" placeholder="Ticker" name="ticker" required>
+      <input type="number" placeholder="Company Price" name="price" required>
+      <input type="number" placeholder="Amount" name="amount" required>
+      <button id="ac" type="button" onclick="submitForm()">Submit</button>
+    </form>
+  </div>
+
+  <table id="TR">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Value</th>
+        <th>Click To Buy More</th>
+        <th>Click To Remove</th>
+      </tr>
+    </thead>
+    <tbody id="TB">
+    </tbody>
+  </table>
+</body>
+
+</html>
